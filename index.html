@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dawn — Joias sob medida</title>
+  <meta name="description" content="A Dawn cria joias personalizadas e exclusivas. Conte sua história e nossa equipe preparará um atendimento sob medida.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ CAPA ============ -->
+  <section class="screen cover is-active" id="screen-cover">
+    <div class="cover__bg" aria-hidden="true"></div>
+    <div class="cover__inner">
+      <svg class="logo" viewBox="0 0 130 100" role="img" aria-label="Dawn">
+        <text x="8" y="82" font-family="Playfair Display, Didot, Georgia, serif" font-size="96" font-weight="500" fill="currentColor">A</text>
+        <g transform="translate(104,42) scale(1.4)" fill="#93A9C4">
+          <path d="M0,-10 C1,-3 3,-1 10,0 C3,1 1,3 0,10 C-1,3 -3,1 -10,0 C-3,-1 -1,-3 0,-10 Z"/>
+        </g>
+      </svg>
+
+      <h1>O primeiro brilho de uma joia acontece antes dela existir.</h1>
+      <p>Ele nasce no momento em que você decide criar algo que é só seu. Na Dawn, cada peça começa por aí — pela sua ideia.</p>
+      <p>Conte-nos em poucos minutos o que você imagina, e nossa equipe chegará ao primeiro encontro já preparada para desenhar a joia certa para você.</p>
+
+      <button class="btn btn--primary" id="btn-start">Iniciar aplicação</button>
+      <p class="hint">pressione <kbd>Enter</kbd> para começar</p>
+    </div>
+  </section>
+
+  <!-- ============ FORMULÁRIO ============ -->
+  <section class="screen" id="screen-form">
+    <div class="form-shell">
+      <header class="progress">
+        <span class="progress__count" id="progress-count">1 / 5</span>
+        <div class="progress__track" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track">
+          <div class="progress__bar" id="progress-bar"></div>
+        </div>
+      </header>
+
+      <div class="step-area">
+
+        <!-- Etapa 1: tipo de joia -->
+        <div class="step is-active" data-step="0" data-kind="choice" data-field="tipo">
+          <p class="step__eyebrow">Sobre o seu projeto</p>
+          <h2 class="step__title">Que tipo de joia você deseja criar?</h2>
+          <p class="step__help">Escolha uma opção — você poderá detalhar tudo com a nossa equipe.</p>
+          <div class="options" role="group" aria-label="Tipo de joia">
+            <button class="option" aria-pressed="false" data-value="Anel"><span class="option__key">A</span>Anel</button>
+            <button class="option" aria-pressed="false" data-value="Anel de noivado"><span class="option__key">B</span>Anel de noivado</button>
+            <button class="option" aria-pressed="false" data-value="Aliança"><span class="option__key">C</span>Aliança</button>
+            <button class="option" aria-pressed="false" data-value="Brinco"><span class="option__key">D</span>Brinco</button>
+            <button class="option" aria-pressed="false" data-value="Colar"><span class="option__key">E</span>Colar</button>
+            <button class="option" aria-pressed="false" data-value="Pingente"><span class="option__key">F</span>Pingente</button>
+            <button class="option" aria-pressed="false" data-value="Pulseira"><span class="option__key">G</span>Pulseira</button>
+          </div>
+        </div>
+
+        <!-- Etapa 2: investimento -->
+        <div class="step" data-step="1" data-kind="choice" data-field="investimento">
+          <p class="step__eyebrow">Sobre o seu projeto</p>
+          <h2 class="step__title">Qual faixa de investimento você imagina para sua joia?</h2>
+          <p class="step__help">Isso nos ajuda a propor materiais e pedras compatíveis com o seu projeto.</p>
+          <div class="options" role="group" aria-label="Faixa de investimento">
+            <button class="option" aria-pressed="false" data-value="R$ 5.000 a R$ 10.000"><span class="option__key">A</span>R$ 5.000 a R$ 10.000</button>
+            <button class="option" aria-pressed="false" data-value="R$ 10.001 a R$ 20.000"><span class="option__key">B</span>R$ 10.001 a R$ 20.000</button>
+            <button class="option" aria-pressed="false" data-value="R$ 20.001 a R$ 50.000"><span class="option__key">C</span>R$ 20.001 a R$ 50.000</button>
+            <button class="option" aria-pressed="false" data-value="R$ 50.001 a R$ 100.000"><span class="option__key">D</span>R$ 50.001 a R$ 100.000</button>
+            <button class="option" aria-pressed="false" data-value="Acima de R$ 100.001"><span class="option__key">E</span>Acima de R$ 100.001</button>
+          </div>
+        </div>
+
+        <!-- Etapa 3: prazo -->
+        <div class="step" data-step="2" data-kind="choice" data-field="prazo">
+          <p class="step__eyebrow">Sobre o seu projeto</p>
+          <h2 class="step__title">Para quando você gostaria da sua joia pronta?</h2>
+          <p class="step__help">Cada peça é produzida artesanalmente — o prazo influencia o que podemos criar.</p>
+          <div class="options" role="group" aria-label="Prazo desejado">
+            <button class="option" aria-pressed="false" data-value="Em até 15 dias"><span class="option__key">A</span>Em até 15 dias</button>
+            <button class="option" aria-pressed="false" data-value="Em até 30 dias"><span class="option__key">B</span>Em até 30 dias</button>
+            <button class="option" aria-pressed="false" data-value="Em até 60 dias"><span class="option__key">C</span>Em até 60 dias</button>
+            <button class="option" aria-pressed="false" data-value="Sem pressa"><span class="option__key">D</span>Sem pressa — quero fazer com calma</button>
+          </div>
+        </div>
+
+        <!-- Etapa 4: contato -->
+        <div class="step" data-step="3" data-kind="contact">
+          <p class="step__eyebrow">Quase lá</p>
+          <h2 class="step__title">Como podemos falar com você?</h2>
+          <p class="step__help">Nossa equipe entrará em contato para dar vida ao seu projeto.</p>
+
+          <div class="field" data-field="nome">
+            <label for="input-nome">Qual o seu nome?</label>
+            <input id="input-nome" type="text" name="nome" autocomplete="name" placeholder="Responda aqui..." required>
+            <p class="field__error">Por favor, informe seu nome.</p>
+          </div>
+
+          <div class="field" data-field="telefone">
+            <label for="input-telefone">Qual seu telefone?</label>
+            <input id="input-telefone" type="tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(11) 96123-4567" required>
+            <p class="field__error">Informe um telefone válido com DDD.</p>
+          </div>
+
+          <div class="field" data-field="email">
+            <label for="input-email">Qual o seu e-mail?</label>
+            <input id="input-email" type="email" name="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+            <p class="field__error">Informe um e-mail válido.</p>
+          </div>
+
+          <p class="privacy">🔒 Seus dados são usados apenas para o nosso contato sobre este projeto e nunca são compartilhados com terceiros.</p>
+
+          <div class="actions">
+            <button class="btn btn--ghost" data-nav="back">Voltar</button>
+            <button class="btn btn--primary" data-nav="next">Continuar</button>
+          </div>
+        </div>
+
+        <!-- Etapa 5: próximo passo -->
+        <div class="step" data-step="4" data-kind="choice" data-field="canal">
+          <p class="step__eyebrow">Próximo passo</p>
+          <h2 class="step__title">Como você prefere continuar a conversa?</h2>
+          <p class="step__help">Reserve um horário com uma de nossas especialistas — ou fale agora com nossa concierge para uma orientação personalizada.</p>
+          <div class="options" role="group" aria-label="Canal de atendimento">
+            <button class="option" aria-pressed="false" data-value="Videochamada com especialista"><span class="option__key">A</span>Agendar videochamada com especialista</button>
+            <button class="option" aria-pressed="false" data-value="WhatsApp com concierge"><span class="option__key">B</span>Falar com a concierge via WhatsApp</button>
+          </div>
+        </div>
+
+        <!-- Etapa 6: resumo -->
+        <div class="step" data-step="5" data-kind="summary">
+          <p class="step__eyebrow">Revisão</p>
+          <h2 class="step__title">Confirme os detalhes do seu projeto</h2>
+          <p class="step__help">Tudo certo? Nossa equipe recebe sua aplicação assim que você enviar.</p>
+
+          <div class="summary" id="summary"></div>
+
+          <div class="actions">
+            <button class="btn btn--ghost" data-nav="back">Voltar</button>
+            <button class="btn btn--primary" id="btn-submit">Enviar aplicação</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONCLUSÃO ============ -->
+  <section class="screen cover" id="screen-done">
+    <div class="cover__bg" aria-hidden="true"></div>
+    <div class="cover__inner done">
+      <div class="done__spark" aria-hidden="true">✦</div>
+      <h1>Aplicação recebida.</h1>
+      <p>Obrigado por compartilhar sua história com a Dawn.</p>
+      <p>Nossa equipe analisará seu projeto e entrará em contato <strong>em até 24 horas úteis</strong> pelo telefone ou e-mail informado.</p>
+      <p><a class="social-link" href="https://www.instagram.com/dawn.joias" target="_blank" rel="noopener">Enquanto isso, conheça nossas criações no Instagram → @dawn.joias</a></p>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
