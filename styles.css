@@ -344,6 +344,31 @@ body {
 
 /* ---------- conclusão ---------- */
 
+/* Instagram na capa — discreto, para não competir com o botão. */
+.cover__social {
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  margin-top: calc(var(--step) * 2.4);
+  color: var(--sparkle);
+  font-size: .82rem;
+  letter-spacing: .06em;
+  text-decoration: none;
+  opacity: .75;
+  transition: opacity .2s, color .2s;
+}
+
+.cover__social svg {
+  width: 1.05em;
+  height: 1.05em;
+}
+
+.cover__social:hover,
+.cover__social:focus-visible {
+  opacity: 1;
+  color: var(--ivory);
+}
+
 .social-link {
   color: var(--sparkle);
   text-decoration: none;
