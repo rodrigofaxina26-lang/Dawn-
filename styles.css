@@ -41,13 +41,15 @@ body {
 
 .screen { display: none; }
 .screen.is-active { display: block; }
+/* A capa usa grid para centralizar, mas só quando está ativa — senão esta
+   regra venceria o display:none acima e a capa ficaria sempre na tela. */
+.cover.is-active { display: grid; }
 
 /* ---------- capa ---------- */
 
 .cover {
   position: relative;
   min-height: 100svh;
-  display: grid;
   place-items: center;
   text-align: center;
   padding: calc(var(--step) * 2);
