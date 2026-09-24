@@ -322,6 +322,10 @@ body {
 .actions { display: flex; align-items: center; gap: .5rem; }
 .actions .btn--primary { margin-left: auto; }
 
+/* Nas etapas de escolha o avanço é automático, então a linha traz só o
+   voltar — afastado das opções para não ser clicado sem querer. */
+.actions--back { margin-top: calc(var(--step) * 1.6); }
+
 .hint {
   color: var(--ivory-mute);
   font-size: .8rem;
